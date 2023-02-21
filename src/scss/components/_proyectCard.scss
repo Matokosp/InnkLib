@@ -1,0 +1,91 @@
+.proyect-card {
+  padding: 20px 22px;
+  border-radius: 16px;
+
+  .title {
+    color: $primary;
+    border-radius: 10px;
+    padding: 8px 12px;
+    grid-column: span 9;
+    align-self: self-start;
+    h3 {
+      width: 60%;
+    }
+  }
+  .action-box {
+    grid-column: span 3;
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .messages {
+        flex: 0 1 70%;
+        display: flex;
+        button {
+          min-width: 100%;
+          img {
+            width: 20px;
+          }
+        }
+      }
+      .favourite {
+        width: 28px;
+      }
+    }
+    .status {
+      font-weight: 700;
+      color: $gray;
+      margin-top: 15px;
+    }
+  }
+  .portfolio {
+    grid-column: 1 / -1;
+    p {
+      color: $gray;
+    }
+    span {
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+  .content-row {
+    column-gap: 10px;
+    .box {
+      h3.number {
+        margin-bottom: 5px;
+      }
+      padding: 8px 12px;
+      > .between:nth-child(2) {
+        margin-top: 10px;
+      }
+      button {
+        min-width: auto;
+      }
+      .border-left {
+        padding-left: 20%;
+      }
+    }
+  }
+  button:last-child {
+    float: right;
+  }
+
+  @include media-down(md) {
+    .title {
+      grid-column: span 12;
+    }
+
+    .action-box {
+      grid-column: span 4;
+      display: flex;
+      margin-top: 15px;
+      .top-row {
+        flex: 0 0 120px;
+        column-gap: 20px;
+      }
+      .status {
+        margin-left: 20px;
+      }
+    }
+  }
+}

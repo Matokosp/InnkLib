@@ -1,0 +1,25 @@
+.course-card {
+  position: relative;
+  max-width: 380px;
+  .card {
+    border-radius: 16px;
+    .image {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 285 / 100;
+    }
+
+    .status-box {
+      h3 {
+        > img {
+          width: 35px;
+        }
+      }
+    }
+  }
+}

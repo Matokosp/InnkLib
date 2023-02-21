@@ -1,0 +1,17 @@
+.full-width-image {
+  .info-container {
+    aspect-ratio: 1080 / 392;
+    position: relative;
+    > img {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+    @include media-down(md) {
+      padding: 80px 12px !important;
+      aspect-ratio: none;
+    }
+  }
+}

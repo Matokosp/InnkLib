@@ -1,0 +1,36 @@
+<div class="idea-card {{ideaView ? 'mb-3' : null}}">
+	<div class="box shadow-1 card">
+		<div class="box shadow-2 image">
+			<img class="image" src="../../assets/images/image1.png" alt=""/>
+		</div>
+		<div class="content flex-column p-2 pt-3">
+			<div class="box shadow-1 pt-1 pb-1 pl-2 pr-2">
+				<p class="italic gray">Idea:</p>
+				<h3 class="primary">Idea de prueba</h3>
+			</div>
+			<div class="flex justify-start pt-3 pl-4 pr-4">
+				<p class="italic gray">Desafío:</p>
+				<p class="pl-2">Transformación digital junto a nuestros clientes</p>
+			</div>
+			<div class="flex justify-start pt-3 pl-4 pr-4">
+				<p class="italic gray">Estado:</p>
+				<p class="pl-2">En curso</p>
+			</div>
+			<div class="flex-column align-center mt-3">
+				<div class="between action-buttons">
+					<button class="default icon shadow auto-width">
+						<img src="../../assets/images/like.svg"/>
+						142
+					</button>
+					<button class="default icon shadow auto-width">
+						<img src="../../assets/images/message.svg"/>
+						25
+					</button>
+				</div>
+				{% if ideaView != true %}
+					<button class="secondary mt-2 align-self-center">Ver idea</button>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>

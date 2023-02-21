@@ -1,0 +1,27 @@
+.idea-card {
+  position: relative;
+  max-width: 380px;
+  &.side-menu {
+    max-width: 100%;
+  }
+  .card {
+    border-radius: 16px;
+    .image {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 285 / 100;
+    }
+
+    .action-buttons {
+      column-gap: 10px;
+      > button {
+        width: 125px;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@mixin media-up($bp) {
+  @media (min-width: (map-get($grid-breakpoints, $bp) + 1)) {
+    @content;
+  }
+}
+
+@mixin media-down($bp) {
+  @media (max-width: (map-get($grid-breakpoints, $bp))) {
+    @content;
+  }
+}
+
+@mixin media-ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin media-chrome-safari {
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin add_mapped_styles($styles) {
+  @each $name, $style in $styles {
+    #{$name} {
+      @each $attr, $value in $style {
+        #{$attr}: #{$value};
+      }
+    }
+  }
+}
+
+@mixin add_media_styles($media_styles) {
+  @each $key, $styles in $media_styles {
+    @if $key == 'xs' {
+      @include add_mapped_styles($styles);
+    } @else {
+      $bp: map-get($grid-breakpoints, $key);
+      @media (min-width: $bp) {
+        @include add_mapped_styles($styles);
+      }
+    }
+  }
+}
+
+@mixin make_grid($gutters, $col: 12) {
+  grid-template-columns: repeat($col, 1fr);
+  @each $key, $gutter in $container-gutter {
+    $bp: map-get($grid-breakpoints, $key);
+    @media (min-width: $bp) {
+      column-gap: $gutter;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin: 0px;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+body {
+  * {
+    box-sizing: border-box;
+  }
+  background-color: $bkg;
+}
+
+button {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+input,
+textarea {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,90 @@
+// @import '../all_utils.scss';
+
+button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 265px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:not(&.default) {
+    color: $white;
+  }
+
+  &:not(&.inline) {
+    transition: 0.2s;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  &.dotted {
+    border: 1px dashed;
+    &.gray {
+      border-color: $gray;
+    }
+  }
+
+  &.auto-width {
+    min-width: auto;
+  }
+
+  &.bold {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px;
+  }
+
+  &.shadow {
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &.opacity {
+    background: rgba($white, 0.3);
+  }
+  &.primary {
+    background: $primary;
+  }
+  &.secondary {
+    background: $secondary;
+  }
+  &.warning {
+    background: $warning;
+  }
+  &.error {
+    background: $error;
+  }
+
+  &.inline {
+    text-decoration: underline;
+    background: transparent;
+    padding: 0px;
+    display: inline-block;
+    &.primary {
+      color: $primary;
+    }
+    &.secondary {
+      color: $secondary;
+    }
+    &.warning {
+      color: $warning;
+    }
+    &.error {
+      color: $error;
+    }
+    &.gray {
+      color: $gray;
+    }
+  }
+
+  &.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg,
+    img {
+      margin-right: 9.5px;
+      width: 21px;
+    }
+  }
+}

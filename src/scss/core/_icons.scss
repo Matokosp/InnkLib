@@ -1,0 +1,77 @@
+.icon {
+  &-check {
+    background-color: $clear;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: $white;
+      height: 2px;
+      width: 10px;
+      transform: rotate(45deg);
+      top: 20px;
+      left: 7px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: $white;
+      height: 2px;
+      width: 15px;
+      transform: rotate(-45deg);
+      top: 17px;
+      left: 13px;
+    }
+  }
+
+  &-pending {
+    background-color: $warning;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      content: 'P';
+      position: absolute;
+      display: block;
+      top: 6px;
+      left: 13px;
+      font-size: 17px;
+      font-weight: 700;
+      color: white;
+    }
+  }
+
+  &-plus {
+    background-color: $gray;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: #ffffff;
+      height: 12px;
+      width: 2px;
+      top: 12px;
+      left: 17px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: #ffffff;
+      height: 2px;
+      width: 12px;
+      top: 17px;
+      left: 12px;
+    }
+  }
+}

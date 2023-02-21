@@ -1,0 +1,35 @@
+.ranking-card {
+  position: relative;
+  &:not(&.points) {
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  > div {
+    height: 100%;
+  }
+  &.points {
+    .rank-wrapper {
+      &:nth-child(3) {
+        width: 92%;
+      }
+      &:nth-child(4) {
+        width: 84%;
+      }
+    }
+    .rank {
+      position: relative;
+      margin-left: 50px;
+      padding-left: 50px;
+      img {
+        position: absolute;
+        left: -50px;
+        top: -10px;
+        width: 80px;
+      }
+    }
+  }
+}
