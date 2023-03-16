@@ -1,6 +1,7 @@
 .idea-card {
   position: relative;
   max-width: 380px;
+  // grid-column: span 1;
   &.side-menu {
     max-width: 100%;
   }

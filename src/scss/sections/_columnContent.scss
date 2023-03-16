@@ -55,7 +55,7 @@
     margin-bottom: 20px;
   }
 
-  @include media-down(xxl) {
+  @include media-down(xl) {
     &.col-2 {
       .content-wrapper {
         > div:nth-child(1) {
@@ -153,6 +153,8 @@
       .content-wrapper {
         align-items: center;
         > div {
+          margin-left: auto;
+          margin-right: auto;
           grid-column: span 6;
         }
       }
