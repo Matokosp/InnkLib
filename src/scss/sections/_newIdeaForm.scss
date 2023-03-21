@@ -2,9 +2,9 @@
   .content-row {
     column-gap: 24px;
     height: 90px;
-    flex-wrap: wrap;
     @include media-down(xl) {
       height: auto;
+      flex-wrap: wrap;
     }
     .text {
       flex: 0 0 30%;

@@ -6,18 +6,16 @@
 	<body>
 		<div id="layout" class="o-layout {{page.class ? page.class : ''}}">
 			<!-- HEADER -->
-			{% include "../includes/header.twig" %}
+			{# {% include "../includes/header.twig" %} #}
 
 			<!-- MAIN -->
-			<main id="main" class="o-main">
-				{% block content %}{% endblock %}
-			</main>
+				<main id="main" class="o-main">{% block content %}{% endblock %} </main>
 
-			<!-- FOOTER -->
-			{% include "../includes/footer.twig" %}
+				<!-- FOOTER -->
+				{% include "../includes/footer.twig" %}
 
-			<!-- SCRIPTS -->
-			{% include "../includes/scripts.twig" %}
-		</div>
-	</body>
-</html>
+				<!-- SCRIPTS -->
+				{% include "../includes/scripts.twig" %}
+			</div>
+		</body>
+	</html>
